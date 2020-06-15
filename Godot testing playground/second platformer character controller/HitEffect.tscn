@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=2]
+
+[sub_resource type="Curve" id=1]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.328982, 0.681818 ), -3.73973, -3.73973, 0, 0, Vector2( 0.642298, 0.327273 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0.105556, 0.277778, 0.636111, 1 )
+colors = PoolColorArray( 0.750977, 0, 0, 0.462745, 0.629395, 0, 0, 0.729412, 0.368164, 0, 0, 0.647059, 0.254902, 0.0509804, 0, 0.0627451 )
+
+[sub_resource type="GDScript" id=3]
+script/source = "extends CPUParticles2D
+
+
+
+
+
+
+
+
+
+
+
+func _ready():
+	emitting = true
+	one_shot = true
+	
+
+
+
+var timer = 60
+var counter = 0
+
+func _process(delta):
+	counter += 1
+	if counter > timer:
+		queue_free()
+		
+	
+"
+
+[node name="HitEffect" type="CPUParticles2D"]
+position = Vector2( -0.802124, 0.227539 )
+z_index = 5
+amount = 100
+lifetime = 0.3
+explosiveness = 1.0
+local_coords = false
+emission_shape = 2
+emission_rect_extents = Vector2( 15, 25 )
+direction = Vector2( -10, -5 )
+spread = 114.53
+gravity = Vector2( -200, -100 )
+initial_velocity = 210.15
+initial_velocity_random = 1.0
+radial_accel = 100.0
+damping = 100.0
+angle = 514.3
+angle_random = 1.0
+scale_amount = 12.0
+scale_amount_random = 0.12
+scale_amount_curve = SubResource( 1 )
+color_ramp = SubResource( 2 )
+script = SubResource( 3 )

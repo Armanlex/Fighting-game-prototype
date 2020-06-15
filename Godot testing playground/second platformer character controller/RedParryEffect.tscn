@@ -1,0 +1,74 @@
+[gd_scene load_steps=5 format=2]
+
+[sub_resource type="Curve" id=1]
+min_value = -1024.0
+max_value = 641.11
+_data = [ Vector2( 0, -240.641 ), 0.0, 2106.16, 0, 0, Vector2( 0.344648, -89.2678 ), -227.357, -227.357, 0, 0, Vector2( 0.720627, -89.2678 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Curve" id=2]
+_data = [ Vector2( 0, 1 ), 0.0, 0.422039, 0, 0, Vector2( 0.370757, 0.735227 ), -1.64928, -1.64928, 0, 0, Vector2( 1, 0.317045 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=3]
+offsets = PoolRealArray( 0, 0.586111, 1 )
+colors = PoolColorArray( 0.894118, 0, 0, 0.796078, 0.921569, 1, 0, 0.25098, 0.972549, 1, 0.639216, 0 )
+
+[sub_resource type="GDScript" id=4]
+script/source = "extends CPUParticles2D
+
+
+
+
+
+
+
+
+
+
+
+func _ready():
+	emitting = true
+	one_shot = true
+	timer = lifetime*60
+	
+
+
+
+var timer = 60
+var counter = 0
+
+func _process(delta):
+	counter += 1
+	if counter > timer:
+		queue_free()
+		
+	
+"
+
+[node name="RedParryEffect" type="CPUParticles2D"]
+position = Vector2( 0.629883, 0.227539 )
+z_index = 5
+amount = 100
+lifetime = 2.0
+preprocess = 0.1
+explosiveness = 1.0
+emission_shape = 2
+emission_rect_extents = Vector2( 5, 5 )
+direction = Vector2( 0, -1 )
+spread = 105.08
+gravity = Vector2( 0, 0 )
+initial_velocity = 685.28
+initial_velocity_random = 0.55
+angular_velocity = 720.0
+angular_velocity_random = 1.0
+linear_accel = -9.64
+linear_accel_curve = SubResource( 1 )
+radial_accel = -100.0
+angle = 720.0
+angle_random = 1.0
+scale_amount = 20.0
+scale_amount_random = 0.55
+scale_amount_curve = SubResource( 2 )
+color_ramp = SubResource( 3 )
+hue_variation = -0.11
+hue_variation_random = 1.0
+script = SubResource( 4 )

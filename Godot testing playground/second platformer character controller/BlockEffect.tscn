@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=2]
+
+[sub_resource type="Curve" id=1]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.498695, 0.706818 ), -1.62485, -1.62485, 0, 0, Vector2( 1, 0.0886364 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=2]
+colors = PoolColorArray( 1, 1, 1, 0.568627, 1, 1, 1, 0 )
+
+[sub_resource type="GDScript" id=3]
+script/source = "extends CPUParticles2D
+
+
+
+
+
+
+
+
+
+
+
+func _ready():
+	emitting = true
+	one_shot = true
+	
+
+
+
+var timer = 60
+var counter = 0
+
+func _process(delta):
+	counter += 1
+	if counter > timer:
+		queue_free()
+		
+	
+"
+
+[node name="BlockEffect" type="CPUParticles2D"]
+position = Vector2( -0.802124, 0.227539 )
+z_index = 5
+amount = 150
+lifetime = 0.25
+explosiveness = 1.0
+local_coords = false
+emission_shape = 2
+emission_rect_extents = Vector2( 15, 25 )
+direction = Vector2( -10, -6 )
+spread = 130.66
+gravity = Vector2( -300, -400 )
+initial_velocity = 300.0
+initial_velocity_random = 0.42
+orbit_velocity = 0.1
+orbit_velocity_random = 1.0
+radial_accel = 100.0
+angle = 514.3
+angle_random = 1.0
+scale_amount = 15.0
+scale_amount_random = 0.84
+scale_amount_curve = SubResource( 1 )
+color_ramp = SubResource( 2 )
+script = SubResource( 3 )

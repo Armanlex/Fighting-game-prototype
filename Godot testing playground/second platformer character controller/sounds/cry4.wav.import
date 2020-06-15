@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/cry4.wav-a6c16ee93e4945e77ea9e680ef6c0f0f.sample"
+
+[deps]
+
+source_file="res://second platformer character controller/sounds/cry4.wav"
+dest_files=[ "res://.import/cry4.wav-a6c16ee93e4945e77ea9e680ef6c0f0f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/disappear.wav-c9bd2bafa5f16c3ab5dcc60577bb3cf3.sample"
+
+[deps]
+
+source_file="res://second platformer character controller/sounds/disappear.wav"
+dest_files=[ "res://.import/disappear.wav-c9bd2bafa5f16c3ab5dcc60577bb3cf3.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

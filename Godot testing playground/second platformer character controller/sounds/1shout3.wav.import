@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/1shout3.wav-d382ac375f70d86c5a707aaa4d09ecaa.sample"
+
+[deps]
+
+source_file="res://second platformer character controller/sounds/1shout3.wav"
+dest_files=[ "res://.import/1shout3.wav-d382ac375f70d86c5a707aaa4d09ecaa.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

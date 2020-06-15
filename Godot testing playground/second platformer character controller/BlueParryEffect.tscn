@@ -1,0 +1,75 @@
+[gd_scene load_steps=5 format=2]
+
+[sub_resource type="Curve" id=1]
+min_value = -1024.0
+max_value = 641.11
+_data = [ Vector2( 0, -240.641 ), 0.0, 2106.16, 0, 0, Vector2( 0.344648, -89.2678 ), -227.357, -227.357, 0, 0, Vector2( 0.720627, -89.2678 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Curve" id=2]
+_data = [ Vector2( 0, 0.629545 ), 0.0, 0.422039, 0, 0, Vector2( 0.0626632, 0.838636 ), 0.0, 0.0, 0, 0, Vector2( 0.127937, 0.475 ), 0.0, 0.0, 0, 0, Vector2( 0.177546, 0.720455 ), 0.0, 0.0, 0, 0, Vector2( 0.24282, 0.420455 ), 0.0, 0.0, 0, 0, Vector2( 0.302872, 0.575 ), 0.0, 0.0, 0, 0, Vector2( 0.37859, 0.320455 ), 0.0, 0.0, 0, 0, Vector2( 0.449086, 0.520455 ), 0.0, 0.0, 0, 0, Vector2( 0.532637, 0.275 ), 0.512032, 0.512032, 0, 0, Vector2( 0.637076, 0.447727 ), 1.51772, 1.51772, 0, 0, Vector2( 0.749347, 0.211364 ), 0.0, 0.0, 0, 0, Vector2( 0.845953, 0.302273 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=3]
+offsets = PoolRealArray( 0, 0.105556, 0.197222, 0.305556, 0.436111, 0.65, 0.905556, 1 )
+colors = PoolColorArray( 0, 0.165039, 1, 1, 0.207843, 0.290196, 0.705882, 0.662745, 0.192157, 0.243137, 0.501961, 0.741176, 0.133333, 0.196078, 0.501961, 0.701961, 0.129412, 0.196078, 0.521569, 0.427451, 0.121569, 0.172549, 0.435294, 0.294118, 0.231417, 0.305721, 0.680953, 0.768627, 0.00784314, 0.0509804, 0.270588, 0.0588235 )
+
+[sub_resource type="GDScript" id=4]
+script/source = "extends CPUParticles2D
+
+
+
+
+
+
+
+
+
+
+
+func _ready():
+	emitting = true
+	one_shot = true
+	timer = lifetime*60
+	
+
+
+
+var timer = 60
+var counter = 0
+
+func _process(delta):
+	counter += 1
+	if counter > timer:
+		queue_free()
+		
+	
+"
+
+[node name="RedParryEffect" type="CPUParticles2D"]
+position = Vector2( 0.629883, 0.227539 )
+z_index = 5
+amount = 100
+lifetime = 2.0
+preprocess = 0.1
+explosiveness = 1.0
+emission_shape = 2
+emission_rect_extents = Vector2( 5, 5 )
+direction = Vector2( 0, -1 )
+spread = 105.08
+gravity = Vector2( 0, -170 )
+initial_velocity = 685.28
+initial_velocity_random = 0.73
+angular_velocity = 720.0
+angular_velocity_random = 1.0
+linear_accel = -9.64
+linear_accel_curve = SubResource( 1 )
+radial_accel = -100.0
+damping = 100.0
+angle = 720.0
+angle_random = 1.0
+scale_amount = 15.0
+scale_amount_random = 0.29
+scale_amount_curve = SubResource( 2 )
+color_ramp = SubResource( 3 )
+hue_variation = 0.03
+hue_variation_random = 1.0
+script = SubResource( 4 )

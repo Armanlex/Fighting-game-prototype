@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/woosh3.wav-bcbd8dd190c73c40f7b3bd8c5d1e5265.sample"
+
+[deps]
+
+source_file="res://second platformer character controller/sounds/woosh3.wav"
+dest_files=[ "res://.import/woosh3.wav-bcbd8dd190c73c40f7b3bd8c5d1e5265.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/normal_hit.wav-d3c6a50ebf8d8966919fa62f4a37f3d6.sample"
+
+[deps]
+
+source_file="res://second platformer character controller/sounds/normal_hit.wav"
+dest_files=[ "res://.import/normal_hit.wav-d3c6a50ebf8d8966919fa62f4a37f3d6.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

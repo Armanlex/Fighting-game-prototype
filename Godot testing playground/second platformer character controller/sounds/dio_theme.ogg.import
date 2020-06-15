@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/dio_theme.ogg-f204e06daad30f824533da94f4f39ce4.oggstr"
+
+[deps]
+
+source_file="res://second platformer character controller/sounds/dio_theme.ogg"
+dest_files=[ "res://.import/dio_theme.ogg-f204e06daad30f824533da94f4f39ce4.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

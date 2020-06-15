@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://second platformer character controller/sounds/dio_theme.ogg" type="AudioStream" id=1]
+[ext_resource path="res://scripts/audio_analyzer.gd" type="Script" id=2]
+[ext_resource path="res://assets/test_pro_bg.png" type="Texture" id=3]
+[ext_resource path="res://Anchor.tscn" type="PackedScene" id=4]
+[ext_resource path="res://MainMenuButton.tscn" type="PackedScene" id=5]
+
+[node name="ActualAudioVisualizer" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 516.879, 304.15 )
+scale = Vector2( 2.13924, 1.28129 )
+texture = ExtResource( 3 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="audio_analyzer" type="Node2D" parent="."]
+position = Vector2( -34.3322, 555.69 )
+scale = Vector2( 1.81991, 1.81991 )
+script = ExtResource( 2 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="audio_analyzer"]
+stream = ExtResource( 1 )
+volume_db = -20.467
+
+[node name="Anchor" parent="audio_analyzer" instance=ExtResource( 4 )]
+
+[node name="MainMenuButton" parent="." instance=ExtResource( 5 )]
+position = Vector2( 781.362, 6.48837 )

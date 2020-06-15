@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/round6.wav-08002378ddb64b08fbd587a5c834ff7e.sample"
+
+[deps]
+
+source_file="res://second platformer character controller/sounds/round6.wav"
+dest_files=[ "res://.import/round6.wav-08002378ddb64b08fbd587a5c834ff7e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
