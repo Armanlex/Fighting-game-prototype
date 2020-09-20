@@ -1,14 +1,20 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://assets/basic_melee_attack.png" type="Texture" id=1]
-[ext_resource path="res://assets/aoe_fire.png" type="Texture" id=2]
-[ext_resource path="res://scripts/Dancer.gd" type="Script" id=3]
-[ext_resource path="res://scripts/TopRight.gd" type="Script" id=4]
-[ext_resource path="res://scripts/BottomLeft.gd" type="Script" id=5]
-[ext_resource path="res://scripts/Anchor.gd" type="Script" id=6]
+[ext_resource path="res://scriptsa/Dancer.gd" type="Script" id=3]
+[ext_resource path="res://scriptsa/TopRight.gd" type="Script" id=4]
+[ext_resource path="res://scriptsa/BottomLeft.gd" type="Script" id=5]
+[ext_resource path="res://scriptsa/Anchor.gd" type="Script" id=6]
+
+[sub_resource type="StreamTexture" id=4]
+flags = 4
+load_path = "res://.import/aoe_fire.png-8ff5e5cda13036c24d7be78cda5b2182.stex"
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 34.7744
+
+[sub_resource type="StreamTexture" id=5]
+flags = 4
+load_path = "res://.import/basic_melee_attack.png-d3706c573c8a49e5a9648b0b96fede85.stex"
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 20.3442
@@ -21,7 +27,7 @@ script = ExtResource( 6 )
 
 [node name="Dancer" type="Sprite" parent="."]
 position = Vector2( 163.536, -223.143 )
-texture = ExtResource( 2 )
+texture = SubResource( 4 )
 script = ExtResource( 3 )
 
 [node name="Area2D" type="Area2D" parent="Dancer"]
@@ -34,7 +40,7 @@ position = Vector2( 319.321, -202.076 )
 script = ExtResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="TopRight"]
-texture = ExtResource( 1 )
+texture = SubResource( 5 )
 
 [node name="Area2D" type="Area2D" parent="TopRight/Sprite"]
 
@@ -46,7 +52,7 @@ position = Vector2( 217.938, -111.728 )
 script = ExtResource( 5 )
 
 [node name="Sprite" type="Sprite" parent="BottomLeft"]
-texture = ExtResource( 1 )
+texture = SubResource( 5 )
 
 [node name="Area2D" type="Area2D" parent="BottomLeft/Sprite"]
 

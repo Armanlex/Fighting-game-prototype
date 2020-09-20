@@ -8,14 +8,9 @@
 
 config_version=4
 
-_global_script_classes=[ {
-"base": "Reference",
-"class": "ClassTest2",
-"language": "GDScript",
-"path": "res://scripts/class2test.gd"
-} ]
+_global_script_classes=[  ]
 _global_script_class_icons={
-"ClassTest2": ""
+
 }
 
 [application]
@@ -26,8 +21,7 @@ config/icon="res://assets/icon.png"
 
 [autoload]
 
-Global="*res://scripts/Global.gd"
-Classes="*res://scripts/Classes.gd"
+Global="*res://Global.gd"
 
 [display]
 
